@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ニュース詳細</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap&subset=japanese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap&subset=japanese" rel="stylesheet">
+    <link rel="stylesheet" href="./css/news-article.css">
+
+    <script src="https://kit.fontawesome.com/1459fe4db2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="./js/service.js"></script>
+    <script src="./js/jump_to_top.js"></script>
+
+    <!--object-sit（IE対策）-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="pc-navi">
+            <a class="logo-link" href="./index.html">
+                <img id="logo-img" src="./img/header_logo_black_2x.png" alt="logo">
+            </a>
+            <ul>
+                <li><a class="menu-link" href="index.html">ホーム</a></li>
+                <li><a class="menu-link view" href="./news-list.html">ニュース</a></li>
+                <li><a class="menu-link" href="service.html">業務内容</a></li>
+                <li><a class="menu-link" href="./about.html">会社説明</a></li>
+                <li><a class="menu-link" href="./contact.html">問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <nav id="sp-navi">
+            <a class="logo-link" href="#"><img id="logo-img" src="./img/header_logo_black_2x.png" alt="logo"></a>
+            <div class="navi-btn">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="sp-menu">
+                <a class="logo-link" href="#"><img id="logo-img-menu" src="./img/header_logo_black_2x.png"
+                        alt="logo"></a>
+                <li><a class="menu-link-sp" href="index.html">ホーム</a></li>
+                <li><a class="menu-link-sp" href="./news-list.html">ニュース</a></li>
+                <li><a class="menu-link-sp" href="service.html">業務内容</a></li>
+                <li><a class="menu-link-sp" href="./about.html">会社説明</a></li>
+                <div>
+                    <a class="contact-btn-sp" href="./contact.html">問い合わせ</a>
+                </div>
+            </ul>
+        </nav>
+
+    </header>
+
+    <article>
+        <div class="header-img-container">
+            <div class="main-title-container">
+                <h1 class="main-title-en">
+                    NEWS
+                    <span class="main-title-ja">ニュース</span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="main-content-area">
+            <ul class="breadcrumbs">
+                <li><a class="bread-link" href="./index.html">ホーム</a></li>
+                <li><a class="bread-link" href="./news-list.html"></a>ニュース一覧</li>
+                <li> ニュース記事タイトルが入ります</li>
+            </ul>
+            <!-- メインコンテンツ -->
+            <article class="article-bg">
+                <div class="article-container">
+                    <div class="article-title-box">
+                        <h2 class="article-title">ニュース記事タイトルが入ります</h2>
+                        <div class="sp-title-underline">under-line</div>
+                        <div class="some-btn">
+                            <div class="date-category">
+                                <p class="date">2020.00.00</p>
+                                <p class="category">カテゴリー名</p>
+                            </div>
+                            <div class="share-btn">
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                                    data-show-count="false">Tweet</a>
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/"
+                                    data-layout="button" data-size="small">
+                                    <a target="_blank"
+                                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse"
+                                        class="fb-xfbml-parse-ignore">シェア</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="article-img" src="./img/news-article/article-img_1@2x.png" alt="service_first">
+                    <div class="content-first">
+                        <p class="content-first-article">
+                            BrightFutureは余白を美しく設計することで、より写真が魅力的に美味しく見えるようにデザインしました。<br>
+                            飲食店向けのデザインですがシンプルなデザインですのでコーポレートにも使えます。貴店のロゴ、キーカラーに合わせて強調色を変更いたします。<br>
+                            トップページ、WordPress搭載でお客様ご自身で発信できるNEWS、MENU、GALLERY、ACCESS、フォーム仕様のRESERVEをセットで制作いたします。<br>
+                            ページ名称やコンテンツの中身は変更可能ですのでお気軽にご相談ください。<br>
+                            フォントにはGoogleFontで欧文「Playfair Display」と日本語見出し「Noto Serif」日本語本文「Noto
+                            Sans」を使用、デバイスフォントでデザインされた書体を表示できます。<br>
+                            記事・ページごとにタイトル、ディスクリプション、キーワードの設定ができるのでSEOも対策済みです。
+                        </p>
+                    </div>
+                    <div class="indexlink">
+                        <ul class="indexlink-ul">
+                            <li class="index-li">大見出しと連動した目次コンテンツが生成できます。</li>
+                            <li class="index-li">すみずみまで設計されたデザイン！すべてレスポンシブ対応です</li>
+                            <li class="index-li">写真とテキストを差し替えるだけですぐに公開が可能！</li>
+                        </ul>
+                    </div>
+                    <div class="content-second">
+                        <h3 class="article-title-sub">大見出しが入ります大見出しが入ります</h3>
+                        <div class="title-underline">line</div>
+                        <h4 class="article-subsub-title">小見出しが入ります小見出しが入ります</h4>
+                        <p class="content-first-article">
+                            BrightFutureは余白を美しく設計することで、より写真が魅力的に美味しく見えるようにデザインしました。<br>
+                            飲食店向けのデザインですがシンプルなデザインですのでコーポレートにも使えます。貴店のロゴ、キーカラー
+                            に合わせて強調色を変更いたします。トップページ、WordPress搭載でお客様ご自身で発信できるNEWS、MENU、
+                            GALLERY、ACCESS、フォーム仕様のRESERVEをセットで制作いたします。ページ名称やコンテンツの中身は変更
+                            可能ですのでお気軽にご相談ください。フォントにはGoogleFontで欧文「Playfair
+                            Display」と日本語見出し「Noto Serif」日本語本文「Noto
+                            Sans」を使用、デバイスフォントでデザインされた書体を表示できます。記事・ページごとにタイトル、ディスク
+                            リプション、キーワードの設定ができるのでSEOも対策済みです。
+                        </p>
+                        <div class="article-with-pict">
+                            <img src="./img/news-article/article-img_2@2x.png" alt="img2">
+                            <div class="ccb">
+                                <h4 class="article-subsub-title">小見出しが入ります小見出しが入ります</h4>
+                                <p class="content-first-article">
+                                    HOUSE STORYはレスポンシブでデザインされた汎用性の高いベーシックなコーポレート
+                                    のデザインテンプレートです。トップページ、WordPress搭載でお客様ご自身で発信で
+                                    きるニュースページ、業務内容ページ、会社案内ページ、フォーム仕様のお問い合わせ
+                                    ページをセットで制作いたします。フォントには「Noto Sans」を使用、デバイスフォ
+                                    ントでデザインされた書体を表示できます。記事・ページごとにタイトル、ディスクリ
+                                    プション、キーワードの設定ができるのでSEOも対策済みです。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quotation-box">
+                        <ul class="quotation">
+                            <li class="quote">引用文が入ります引用文が入ります引用文が入ります引用文が入ります引用文が入ります</li>
+                            <li class="quote">引用文が入ります引用文が入ります引用文が入ります引用文が入ります引用文が入ります</li>
+                            <li class="quote">引用文が入ります引用文が入ります引用文が入ります引用文が入ります引用文が入ります</li>
+                            <li class="quote">引用文が入ります引用文が入ります引用文が入ります引用文が入ります引用文が入ります</li>
+                        </ul>
+                        <p class="quotation-source">※引用元（<a class="quotation-link" href="#">http://xxx.xxxxxxxxxxxxxxxx.com</a>）</p>
+                    </div>
+
+                    <div class="list dots">
+                        <ul>
+                            <li>この文章はダミーです。リスト文章が入ります。リスト文章が入ります。</li>
+                            <li>この文章はダミーです。リスト文章が入ります。リスト文章が入ります。</li>
+                            <li>この文章はダミーです。リスト文章が入ります。リスト文章が入ります。</li>
+                        </ul>
+                    </div>
+                    <div class="list num">
+                        <ol>
+                            <li>この文章はダミーです。リスト文章が入ります。リスト文章が入ります。</li>
+                            <li>この文章はダミーです。リスト文章が入ります。リスト文章が入ります。</li>
+                            <li>この文章はダミーです。リスト文章が入ります。リスト文章が入ります。</li>
+                        </ol>
+                    </div>
+                    <p class="article-btn"><a href="#">ボタンリンク</a></p>
+                </div>
+            </article>
+            <div class="listpage-selecter">
+                <a class="pager prev" href="#">PREV</a>
+                <a class="pager index" href="./news-list.html">
+                    <div class="index-line">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    INDEX
+                </a>
+                <a class="pager next" href="#">NEXT</a>
+            </div>
+        </div>
+    </article>
+
+
+    <footer>
+        <div class="footer-main">
+            <a id="page-top-jummper" href="#">PAGE top</a>
+            <a class="company-logo-link" href="#"><img class="company-logo" src="./img/footer_logo.svg" alt="logo"></a>
+            <div class="company-info">
+                <p class="info1">株式会社ブライトフューチャー<br class="hide">〒000-0000 東京都港区青山0-0-0</p>
+                <p class="info2">TEL:00-0000-0000　FAX:00-0000-0000 <br class="hide">E:mail <a
+                        class="email">info@sample.com</a></p>
+            </div>
+            <div class="sns-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright &copy; BrightFuture All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
