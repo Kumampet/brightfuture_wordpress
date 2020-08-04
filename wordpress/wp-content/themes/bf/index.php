@@ -34,10 +34,10 @@
             </a>
             <ul>
                 <li><a class="menu-link" href="index">ホーム</a></li>
-                <li><a class="menu-link" href="page-news">ニュース</a></li>
-                <li><a class="menu-link" href="page-service">業務内容</a></li>
-                <li><a class="menu-link" href="page-about">会社説明</a></li>
-                <li><a class="menu-link" href="page-contact">問い合わせ</a></li>
+                <li><a class="menu-link" href="news">ニュース</a></li>
+                <li><a class="menu-link" href="service">業務内容</a></li>
+                <li><a class="menu-link" href="about">会社説明</a></li>
+                <li><a class="menu-link" href="contact">問い合わせ</a></li>
             </ul>
         </nav>
 
@@ -52,11 +52,11 @@
                 <a class="logo-link" href="#"><img id="logo-img-menu" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_black_2x.png"
                         alt="logo"></a>
                 <li><a class="menu-link-sp" href="index">ホーム</a></li>
-                <li><a class="menu-link-sp" href="page-news">ニュース</a></li>
-                <li><a class="menu-link-sp" href="page-service">業務内容</a></li>
-                <li><a class="menu-link-sp" href="page-about">会社説明</a></li>
+                <li><a class="menu-link-sp" href="news">ニュース</a></li>
+                <li><a class="menu-link-sp" href="service">業務内容</a></li>
+                <li><a class="menu-link-sp" href="about">会社説明</a></li>
                 <div>
-                    <a class="contact-btn-sp" href="./contact.html">問い合わせ</a>
+                    <a class="contact-btn-sp" href="contact">問い合わせ</a>
                 </div>
             </ul>
         </nav>

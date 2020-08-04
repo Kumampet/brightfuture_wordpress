@@ -503,7 +503,9 @@ body article div.main-content-area article.article-bg div.article-container div.
 body article div.main-content-area article.article-bg div.article-container div.list-box ul.newslist-container {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type:none; 
+  background-image:none; 
+  padding-left:0;
   width: 100%;
 }
 body article div.main-content-area article.article-bg div.article-container div.list-box ul.newslist-container li.news {

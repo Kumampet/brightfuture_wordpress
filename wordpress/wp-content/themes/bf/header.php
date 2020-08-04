@@ -4,10 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo get_the_title(); ?></title>
+    <title><?php echo the_title(); ?></title>
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/slick/slick.css">
+
+    <?php if (is_page("news")) : ?>
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/news-list.css">
+    <?php endif ?>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
@@ -19,7 +23,13 @@
     <script src="<?php echo get_template_directory_uri(); ?>/slick/slick.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/index.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/jump_to_top.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/header.js"></script>
+    <?php if (!is_page()) : ?>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/header.js"></script>
+    <?php endif ?>
+
+    <?php if (is_page("news")) : ?>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/service.js"></script>
+    <?php endif ?>
     <!--object-sit（IE対策）-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
 
@@ -29,34 +39,33 @@
 <body>
     <header>
         <nav id="pc-navi">
-            <a class="logo-link" href="index">
-                <img id="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_white_2x.png" alt="logo">
+            <a class="logo-link" href="<?php echo home_url(); ?>/index">
+                <img id="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_black_2x.png" alt="logo">
             </a>
             <ul>
-                <li><a class="menu-link" href="index">ホーム</a></li>
-                <li><a class="menu-link" href="page-news">ニュース</a></li>
-                <li><a class="menu-link" href="page-service">業務内容</a></li>
-                <li><a class="menu-link" href="page-about">会社説明</a></li>
-                <li><a class="menu-link" href="page-contact">問い合わせ</a></li>
+                <li><a class="menu-link" href="<?php echo home_url(); ?>/index">ホーム</a></li>
+                <li><a class="menu-link" href="<?php echo home_url(); ?>/news">ニュース</a></li>
+                <li><a class="menu-link" href="<?php echo home_url(); ?>/service">業務内容</a></li>
+                <li><a class="menu-link" href="<?php echo home_url(); ?>/about">会社説明</a></li>
+                <li><a class="menu-link" href="<?php echo home_url(); ?>/contact">問い合わせ</a></li>
             </ul>
         </nav>
 
         <nav id="sp-navi">
-            <a class="logo-link" href="#"><img id="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_white_2x.png" alt="logo"></a>
+            <a class="logo-link" href="<?php echo home_url(); ?>/index"><img id="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_white_2x.png" alt="logo"></a>
             <div class="navi-btn">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
             <ul class="sp-menu">
-                <a class="logo-link" href="#"><img id="logo-img-menu" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_black_2x.png"
-                        alt="logo"></a>
-                <li><a class="menu-link-sp" href="index">ホーム</a></li>
-                <li><a class="menu-link-sp" href="page-news">ニュース</a></li>
-                <li><a class="menu-link-sp" href="page-service">業務内容</a></li>
-                <li><a class="menu-link-sp" href="page-about">会社説明</a></li>
+                <a class="logo-link" href="#"><img id="logo-img-menu" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_black_2x.png" alt="logo"></a>
+                <li><a class="menu-link-sp" href="<?php echo home_url(); ?>/index">ホーム</a></li>
+                <li><a class="menu-link-sp" href="<?php echo home_url(); ?>/page-news">ニュース</a></li>
+                <li><a class="menu-link-sp" href="<?php echo home_url(); ?>/page-service">業務内容</a></li>
+                <li><a class="menu-link-sp" href="<?php echo home_url(); ?>/page-about">会社説明</a></li>
                 <div>
-                    <a class="contact-btn-sp" href="./contact.html">問い合わせ</a>
+                    <a class="contact-btn-sp" href="<?php echo home_url(); ?>/page-contact">問い合わせ</a>
                 </div>
             </ul>
         </nav>
