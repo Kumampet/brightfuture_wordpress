@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrightFuture -トップページ-</title>
+    <title><?php echo the_title() ;?></title>
 
     <!-- <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./slick/slick.css"> -->
@@ -36,7 +36,7 @@
             </a>
             <ul>
                 <li><a class="menu-link view" href="./index.php">ホーム</a></li>
-                <li><a class="menu-link" href="./news">ニュース</a></li>
+                <li><a class="menu-link" href="./archive.php">ニュース</a></li>
                 <li><a class="menu-link" href="./service.html">業務内容</a></li>
                 <li><a class="menu-link" href="./about.html">会社説明</a></li>
                 <li><a class="menu-link" href="./contact.html">問い合わせ</a></li>
@@ -65,8 +65,6 @@
 
     </header>
 
-    
-
     <div class="mainvisual">
         <div id="header-image" class="autoplay">
             <img class="bg" src="<?php echo get_template_directory_uri(); ?>/img/top_1_2x.png" alt="top">
@@ -84,8 +82,11 @@
             <p>SCROLL</p>
         </div>
     </div>
+    
+    <div>ああああ</div>
 
-   
+    
+
     <footer>
         <div class="footer-main">
             <a id="page-top-jummper" href="#">PAGE top</a>

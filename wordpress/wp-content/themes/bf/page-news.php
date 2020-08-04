@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ニュース-News-</title>
+
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/news-list.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap&subset=japanese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP&display=swap&subset=japanese" rel="stylesheet">
+
+    <!-- Font Awesome設定 -->
+    <script>
+        FontAwesomeConfig = { searchPseudoElements: true };
+    </script>
+    <script src="https://kit.fontawesome.com/1459fe4db2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="./js/service.js"></script>
+    <script src="./js/jump_to_top.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="pc-navi">
+            <a class="logo-link" href="./index.html">
+                <img id="logo-img" src="./img/header_logo_black_2x.png" alt="logo">
+            </a>
+            <ul>
+                <li><a class="menu-link" href="index.html">ホーム</a></li>
+                <li><a class="menu-link view" href="#">ニュース</a></li>
+                <li><a class="menu-link" href="service.html">業務内容</a></li>
+                <li><a class="menu-link" href="./about.html">会社説明</a></li>
+                <li><a class="menu-link" href="./contact.html">問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <nav id="sp-navi">
+            <a class="logo-link" href="#"><img id="logo-img" src="./img/header_logo_black_2x.png" alt="logo"></a>
+            <div class="navi-btn">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="sp-menu">
+                <a class="logo-link" href="#"><img id="logo-img-menu" src="./img/header_logo_black_2x.png"
+                        alt="logo"></a>
+                <li><a class="menu-link-sp" href="index.html">ホーム</a></li>
+                <li><a class="menu-link-sp" href="./news-list.html">ニュース</a></li>
+                <li><a class="menu-link-sp" href="service.html">業務内容</a></li>
+                <li><a class="menu-link-sp" href="./about.html">会社説明</a></li>
+                <div>
+                    <a class="contact-btn-sp" href="./contact.html">問い合わせ</a>
+                </div>
+            </ul>
+        </nav>
+
+    </header>
+
+    <article>
+        <div class="header-img-container">
+            <div class="main-title-container">
+                <h1 class="main-title-en">
+                    NEWS
+                    <span class="main-title-ja">ニュース</span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="main-content-area">
+            <ul class="breadcrumbs">
+                <li><a class="bread-link" href="./index.html">ホーム</a></li>
+                <li>ニュース</li>
+            </ul>
+            <!-- メインコンテンツ -->
+            <div class="news-serch">
+                <div class="pull-dw category">
+                    <h3 class="pull-ttl">CATEGORY</h3>
+                    <div class="select-wrap category">
+                        <select class="news-selecter" name="category" id="category">
+                            <option value="" hidden>カテゴリーを選択</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pull-dw archives">
+                    <h3 class="pull-ttl">ARCHIVES</h3>
+                    <div class="select-wrap archives">
+                        <select class="news-selecter" name="archives" id="archives">
+                            <option value="" hidden>日付を選択</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <article class="article-bg">
+                <div class="article-container">
+                    <h2 class="article-title">すべてのカテゴリー</h2>
+                    <div class="list-box">
+                        <ul class="newslist-container">
+
+                        <?php
+
+                            $args = array(
+                                'post', 
+                            );
+                            $the_query = new WP_Query( $args ) ;
+
+                            // Loop
+                            if($the_query->have_posts()){
+                                echo'<ul>';
+                                while ( $the_query->have_posts() ) {
+                                    $the_query->the_post();
+                                    echo '<li class="news">' . get_the_title() . get_the_date() . '</li>';
+                                }
+                                echo'</ul>';
+                                wp_reset_postdata();
+                            } else {
+                                // 特に何もないよ
+                            }
+
+                        ?>
+
+
+                            <!--
+                            <li class="news">
+                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
+                                    ここにニュースタイトルが最新記事5件分読み込まれます</a>
+                            </li>
+                            <li class="news">
+                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
+                                    すみずみまで設計されたデザイン！すべてレスポンシブ対応です</a>
+                            </li>
+                            <li class="news">
+                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
+                                    写真とテキストを差し替えるだけですぐに公開が可能！</a>
+                            </li>
+                            <li class="news">
+                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
+                                    御社のロゴ、キーカラーに合わせて強調色を変更いたします</a>
+                            </li>
+                            <li class="news">
+                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
+                                    ページの追加などはオプションで承ります。お気軽にお申し付けください</a>
+                            </li>
+                            <li class="news">
+                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
+                                    ここにニュースタイトルが最新記事5件分読み込まれます</a>
+                            </li>
+                            <li class="news">
+                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
+                                    すみずみまで設計されたデザイン！すべてレスポンシブ対応です</a>
+                            </li>
+                            <li class="news">
+                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
+                                    写真とテキストを差し替えるだけですぐに公開が可能！</a>
+                            </li>
+                            <li class="news">
+                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
+                                    御社のロゴ、キーカラーに合わせて強調色を変更いたします</a>
+                            </li>
+                            <li class="news">
+                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
+                                    ページの追加などはオプションで承ります。お気軽にお申し付けください</a>
+                            </li>
+-->
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <div class="listpage-selecter">
+                <a class="pager prev" href="#">PREV</a>
+                <ul class="page-list">
+                    <li class="page-num"><a class="page-link now-page" href="#">1</a></li>
+                    <li class="page-num"><a class="page-link" href="#">2</a></li>
+                    <li class="page-num"><a class="page-link" href="#">3</a></li>
+                    <li class="page-num"><a class="page-link" href="#">4</a></li>
+                    <li class="page-num"><a class="page-link" href="#">･･･</a></li>
+                </ul>
+                <a class="pager next" href="#">NEXT</a>
+            </div>
+
+        </div>
+    </article>
+
+
+
+    <footer>
+        <div class="footer-main">
+            <a id="page-top-jummper" href="#">PAGE top</a>
+            <a class="company-logo-link" href="#"><img class="company-logo" src="./img/footer_logo.svg" alt="logo"></a>
+            <div class="company-info">
+                <p class="info1">株式会社ブライトフューチャー<br class="hide">〒000-0000 東京都港区青山0-0-0</p>
+                <p class="info2">TEL:00-0000-0000　FAX:00-0000-0000 <br class="hide">E:mail <a
+                        class="email">info@sample.com</a></p>
+            </div>
+            <div class="sns-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright &copy; BrightFuture All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
