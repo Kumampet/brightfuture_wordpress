@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ニュース-News-</title>
+    <title><?php echo the_title() ;?></title>
 
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/news-list.css">
@@ -40,14 +40,14 @@
         </nav>
 
         <nav id="sp-navi">
-            <a class="logo-link" href="#"><img id="logo-img" src="./img/header_logo_black_2x.png" alt="logo"></a>
+            <a class="logo-link" href="#"><img id="logo-img" src="<?php echo get_template_directory_uri();?>/img/header_logo_black_2x.png" alt="logo"></a>
             <div class="navi-btn">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
             <ul class="sp-menu">
-                <a class="logo-link" href="#"><img id="logo-img-menu" src="./img/header_logo_black_2x.png"
+                <a class="logo-link" href="#"><img id="logo-img-menu" src="<?php echo get_template_directory_uri();?>/img/header_logo_black_2x.png"
                         alt="logo"></a>
                 <li><a class="menu-link-sp" href="index.html">ホーム</a></li>
                 <li><a class="menu-link-sp" href="./news-list.html">ニュース</a></li>

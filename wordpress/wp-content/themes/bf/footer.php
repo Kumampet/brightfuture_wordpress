@@ -1,7 +1,7 @@
 <footer>
         <div class="footer-main">
             <a id="page-top-jummper" href="#">PAGE top</a>
-            <a class="company-logo-link" href="#"><img class="company-logo" src="./img/footer_logo.svg" alt="logo"></a>
+            <a class="company-logo-link" href="#"><img class="company-logo" src="<?php echo get_template_directory_uri(); ?>/img/footer_logo.svg" alt="logo"></a>
             <div class="company-info">
                 <p class="info1">株式会社ブライトフューチャー<br class="hide">〒000-0000 東京都港区青山0-0-0</p>
                 <p class="info2">TEL:00-0000-0000　FAX:00-0000-0000 <br class="hide">E:mail <a
