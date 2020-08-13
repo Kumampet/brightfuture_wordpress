@@ -63,64 +63,34 @@
 
                         ?>
 
-
-                        <!--
-                            <li class="news">
-                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
-                                    ここにニュースタイトルが最新記事5件分読み込まれます</a>
-                            </li>
-                            <li class="news">
-                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
-                                    すみずみまで設計されたデザイン！すべてレスポンシブ対応です</a>
-                            </li>
-                            <li class="news">
-                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
-                                    写真とテキストを差し替えるだけですぐに公開が可能！</a>
-                            </li>
-                            <li class="news">
-                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
-                                    御社のロゴ、キーカラーに合わせて強調色を変更いたします</a>
-                            </li>
-                            <li class="news">
-                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
-                                    ページの追加などはオプションで承ります。お気軽にお申し付けください</a>
-                            </li>
-                            <li class="news">
-                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
-                                    ここにニュースタイトルが最新記事5件分読み込まれます</a>
-                            </li>
-                            <li class="news">
-                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
-                                    すみずみまで設計されたデザイン！すべてレスポンシブ対応です</a>
-                            </li>
-                            <li class="news">
-                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
-                                    写真とテキストを差し替えるだけですぐに公開が可能！</a>
-                            </li>
-                            <li class="news">
-                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
-                                    御社のロゴ、キーカラーに合わせて強調色を変更いたします</a>
-                            </li>
-                            <li class="news">
-                                <a class="news-content" href="./news-article.html"><span class="date">2000.00.00</span>
-                                    ページの追加などはオプションで承ります。お気軽にお申し付けください</a>
-                            </li>
--->
                     </ul>
                 </div>
             </div>
         </article>
 
         <div class="listpage-selecter">
-            <a class="pager prev" href="#">PREV</a>
+            <?php if (get_previous_posts_link()) : ?>
+                <a class="pager prev" href="<?php previous_posts_link(); ?>">PREV</a>
+            <?php endif; ?>
             <ul class="page-list">
-                <li class="page-num"><a class="page-link now-page" href="#">1</a></li>
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <li class="page-num">
+                            <a href="<?php the_permalink(); ?>"></a>
+                        </li>
+                        <?php the_excerpt(); ?>
+                        <!-- <li class="page-num"><a class="page-link now-page" href="#">1</a></li>
                 <li class="page-num"><a class="page-link" href="#">2</a></li>
                 <li class="page-num"><a class="page-link" href="#">3</a></li>
                 <li class="page-num"><a class="page-link" href="#">4</a></li>
-                <li class="page-num"><a class="page-link" href="#">･･･</a></li>
+                <li class="page-num"><a class="page-link" href="#">･･･</a></li> -->
+                    <?php endwhile; ?>
+                    <?php the_posts_pagination(); ?>
+                <?php endif; ?>
             </ul>
-            <a class="pager next" href="#">NEXT</a>
+            <?php if (get_next_posts_link()) : ?>
+                <a class="pager next" href="<?php next_posts_link(); ?>">NEXT</a>
+            <?php endif; ?>
         </div>
 
     </div>

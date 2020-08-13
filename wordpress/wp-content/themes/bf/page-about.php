@@ -59,7 +59,7 @@
                                     東京メトロ銀座線/半蔵門線・都営地下鉄大江戸線「青山一丁目」駅 <br>
                                     A1出口より徒歩0分
                                 </p>
-                                <p class="article-btn"><a href="#">Google Map</a></p>
+                                <p class="article-btn"><a href="<?php echo home_url(); ?>/index">Google Map</a></p>
                             </div>
                         </div>
                     </div>
