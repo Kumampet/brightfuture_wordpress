@@ -29,34 +29,34 @@
 <body>
     <header>
         <nav id="pc-navi">
-            <a class="logo-link" href="index">
+            <a class="logo-link" href="<?php get_home_url();?>">
                 <img id="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_white_2x.png" alt="logo">
             </a>
             <ul>
-                <li><a class="menu-link" href="index">ホーム</a></li>
-                <li><a class="menu-link" href="news">ニュース</a></li>
-                <li><a class="menu-link" href="service">業務内容</a></li>
-                <li><a class="menu-link" href="about">会社説明</a></li>
-                <li><a class="menu-link" href="contact">問い合わせ</a></li>
+                <li><a class="menu-link" href="<?php get_home_url();?>">ホーム</a></li>
+                <li><a class="menu-link" href="<?php get_home_url();?>/news">ニュース</a></li>
+                <li><a class="menu-link" href="<?php get_home_url();?>/service">業務内容</a></li>
+                <li><a class="menu-link" href="<?php get_home_url();?>/about">会社説明</a></li>
+                <li><a class="menu-link" href="<?php get_home_url();?>/contact">問い合わせ</a></li>
             </ul>
         </nav>
 
         <nav id="sp-navi">
-            <a class="logo-link" href="#"><img id="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_white_2x.png" alt="logo"></a>
+            <a class="logo-link" href="<?php get_home_url();?>"><img id="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_white_2x.png" alt="logo"></a>
             <div class="navi-btn">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
             <ul class="sp-menu">
-                <a class="logo-link" href="#"><img id="logo-img-menu" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_black_2x.png"
+                <a class="logo-link" href="<?php get_home_url();?>"><img id="logo-img-menu" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_black_2x.png"
                         alt="logo"></a>
-                <li><a class="menu-link-sp" href="index">ホーム</a></li>
-                <li><a class="menu-link-sp" href="news">ニュース</a></li>
-                <li><a class="menu-link-sp" href="service">業務内容</a></li>
-                <li><a class="menu-link-sp" href="about">会社説明</a></li>
+                <li><a class="menu-link-sp" href="<?php get_home_url();?>">ホーム</a></li>
+                <li><a class="menu-link-sp" href="<?php get_home_url();?>/news">ニュース</a></li>
+                <li><a class="menu-link-sp" href="<?php get_home_url();?>/service">業務内容</a></li>
+                <li><a class="menu-link-sp" href="<?php get_home_url();?>/about">会社説明</a></li>
                 <div>
-                    <a class="contact-btn-sp" href="contact">問い合わせ</a>
+                    <a class="contact-btn-sp" href="<?php get_home_url();?>/contact">問い合わせ</a>
                 </div>
             </ul>
         </nav>

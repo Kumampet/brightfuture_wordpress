@@ -41,7 +41,7 @@
                 <img id="logo-img" src="<?php echo get_theme_root_uri(); ?>/bf/img/header_logo_black_2x.png" alt="logo">
             </a>
             <ul>
-                <li><a class="menu-link" href="<?php echo home_url(); ?>/index">ホーム</a></li>
+                <li><a class="menu-link" href="<?php echo home_url(); ?>/">ホーム</a></li>
                 <li><a class="menu-link" href="<?php echo home_url(); ?>/news">ニュース</a></li>
                 <li><a class="menu-link" href="<?php echo home_url(); ?>/service">業務内容</a></li>
                 <li><a class="menu-link" href="<?php echo home_url(); ?>/about">会社説明</a></li>
