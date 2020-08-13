@@ -26,8 +26,8 @@
 
     <script src="https://kit.fontawesome.com/1459fe4db2.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/jump_to_top.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/header.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/jump_to_top.js?00"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/header.js?00"></script><!-- あるはずのないファイルが読まれてる -->
     <!--object-sit（IE対策）-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
 
@@ -38,7 +38,7 @@
     <header>
         <nav id="pc-navi">
             <a class="logo-link" href="<?php echo home_url(); ?>/index">
-                <img id="logo-img" src="<?php echo get_theme_root_uri(); ?>/bf/img/header_logo_black_2x.png" alt="logo">
+                <img id="logo-img" src="<?php echo get_template_directory_uri(); ?>/img/header_logo_black_2x.png" alt="logo">
             </a>
             <ul>
                 <li><a class="menu-link" href="<?php echo home_url(); ?>/">ホーム</a></li>
