@@ -102,7 +102,7 @@
                             記事・ページごとにタイトル、ディスクリプション、キーワードの設定ができるので
                             SEOも対策済みです。
                         </p>
-                        <p class="article-btn"><a href="page-service">詳細はこちら</a></p>
+                        <p class="article-btn"><a href="<?php get_home_url();?>/service">詳細はこちら</a></p>
                     </div>
                 </div>
             </div>
@@ -126,7 +126,7 @@
                             記事・ページごとにタイトル、ディスクリプション、キーワードの設定ができるので
                             SEOも対策済みです。
                         </p>
-                        <p class="article-btn"><a href="page-about">詳細はこちら</a></p>
+                        <p class="article-btn"><a href="<?php get_home_url();?>/about">詳細はこちら</a></p>
                     </div>
                 </div>
             </div>
@@ -135,7 +135,7 @@
                 <div class="article-title-area news">
                     <h1 class="article-title">NEWS</h1>
                     <span class="article-title-ja">ニュース</span>
-                    <p class="article-btn-ie"><a href="#">ニュース一覧</a></p>
+                    <p class="article-btn-ie"><a href="<?php get_home_url();?>/news">ニュース一覧</a></p>
                 </div>
                 <div class="news-space">
                     <ul class="newslist-container">
@@ -161,7 +161,7 @@
                         </li>
                     </ul>
                 </div>
-                <p class="article-btn news"><a href="#">ニュース一覧</a></p>
+                <p class="article-btn news"><a href="<?php get_home_url();?>/news">ニュース一覧</a></p>
             </div>
         </div>
     </article>
